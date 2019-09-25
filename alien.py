@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Alien(Sprite):
     """A class to represent single alien in the fleet"""
 
@@ -37,4 +38,3 @@ class Alien(Sprite):
             return True
         elif self.rect.left <= 0:
             return True
-

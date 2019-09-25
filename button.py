@@ -1,8 +1,9 @@
 import pygame.font
 
-class Button():
 
-    def __init__(self, ai_settings, screen, msg):
+class Button:
+
+    def __init__(self, screen, msg):
         """Initialize button attributes"""
         self.screen = screen
         self.screen_rect = screen.get_rect()
@@ -18,6 +19,8 @@ class Button():
         self.rect.center = self.screen_rect.center
 
         # The button message needs to be prepped only once
+        self.msg_image = None
+        self.msg_image_rect = None
         self.prep_msg(msg)
 
     def prep_msg(self, msg):
@@ -30,4 +33,3 @@ class Button():
         # Draw a blank button and then draw message
         self.screen.fill(self.button_color, self.rect)
         self.screen.blit(self.msg_image, self.msg_image_rect)
-        
