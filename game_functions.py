@@ -245,6 +245,9 @@ def check_play_button(stats, play_button, mouse_x, mouse_y, ai_settings, screen,
         create_fleet(ai_settings=ai_settings, screen=screen, ship=ship, aliens=aliens)
         ship.center_ship()
 
+        # Play the music
+        pygame.mixer.music.play(loops=-1)
+
 
 def check_high_score(stats, sb):
     """Check to see if there's a new high score"""

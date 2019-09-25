@@ -12,6 +12,7 @@ from scoreboard import Scoreboard
 def run_game():
     """Initialize game"""
     pygame.init()
+    pygame.mixer.music.load("sounds/phys_ed.mp3")
     ai_settings = Settings()
 
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
@@ -34,6 +35,8 @@ def run_game():
 
     # Create a fleet of aliens
     gf.create_fleet(ai_settings=ai_settings, screen=screen, aliens=aliens, ship=ship)
+
+
 
     # Start main game loop
     while True:
